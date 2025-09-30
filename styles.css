@@ -1,0 +1,340 @@
+/* Header */
+header {
+    background-color: #000;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.2);
+}
+
+/* Contenedor Flex */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 5px; /* O lo que necesites */
+    padding-right: 20px;
+}
+
+.logo{
+     display: flex;
+    align-items: center;     
+    justify-content: center; 
+    gap: 25px;
+    
+    
+}
+/* Logo */
+.logo a {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    width: 200px;
+    height: 40px;
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    transition: text-shadow 0.5s ease;
+    white-space: nowrap;
+}
+
+.logo a:hover {
+color: #ffffff;
+text-shadow: 5px 5px 10px #00bfff; 
+}
+
+.logo img{
+    width: 50px;
+    height: auto;
+    
+}
+
+/* Navegación */
+.main-nav {
+    margin-left: auto; /* Esto empuja el menú a la derecha */
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #e0e0e0;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav a:hover {
+    color: #00bfff;
+}
+
+.main-nav a.active {
+    color: #00bfff;
+    border-bottom: 2px solid #00bfff;
+}
+
+/* Menú hamburguesa (oculto en escritorio) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #00bfff;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        display: none;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3);
+    }
+
+    .main-nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Fuente base */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0b0b0b;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    line-height: 1.6; /* Añadido para mejor legibilidad general */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px; /* Ajustado para ser consistente con header si aplica */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Título principal */
+.table-of-contents h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #00bfff; /* Azul eléctrico */
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Grid de entradas */
+.entries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas */
+.entry-card {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    border: 2px solid #00bfff;
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.entry-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 191, 255, 0.3), transparent);
+    animation: pulse 4s infinite;
+    z-index: 0;
+}
+
+.entry-card h3 {
+    margin-top: 0;
+    color: #00bfff;
+    font-size: 1.5rem;
+    z-index: 1;
+    position: relative;
+}
+
+.entry-card h3 a {
+    color: #00bfff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.entry-card h3 a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #00bfff;
+}
+
+.entry-card p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-top: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Hover en tarjeta */
+.entry-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 30px 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Enlace activo del menú */
+.main-nav a.active {
+    color: #00bfff;
+    border-bottom: 2px solid #00bfff;
+}
+
+/* Base general para contenido de secciones */
+.content-section {
+    padding: 60px 0; /* Espaciado uniforme para cada sección */
+    border-bottom: 1px solid #1a1a1a; /* Separador sutil entre secciones */
+    margin-bottom: 0; /* No hay margen inferior adicional, se usa padding */
+}
+
+/* Títulos de secciones de contenido */
+.content-section h2 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.content-section h3 {
+    color: #00bfff;
+    font-size: 1.6rem;
+    margin-top: 30px;
+}
+
+/* Párrafos en secciones de contenido */
+.content-section p {
+    font-size: 1.05rem;
+    color: #cccccc;
+}
+
+/* Listas en secciones de contenido */
+.content-section ul {
+    padding-left: 1.2em;
+}
+
+.content-section li {
+    margin-bottom: 15px;
+}
+
+/* Contenedor de imagen en secciones de contenido */
+.content-section .image-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.content-section .image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.content-section .image-container .caption {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-top: 8px;
+}
+
+/* Animaciones para imágenes en secciones de contenido */
+@keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animated-img {
+    opacity: 0; /* inicia invisible */
+    animation: fadeZoomIn 1s ease-out forwards;
+    animation-delay: 0.3s; /* opcional, para que no sea instantáneo */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto; /* centra la imagen si es necesario */
+}
+
+/* Estilos para el botón "Volver al Inicio" */
+.back-to-top {
+    display: block; /* Ocupa su propia línea */
+    width: fit-content; /* Se ajusta al contenido */
+    margin: 40px auto 20px auto; /* Centrar y dar margen */
+    padding: 10px 20px;
+    background-color: #00bfff; /* Fondo azul eléctrico */
+    color: #0b0b0b; /* Texto oscuro para contraste */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #008fcc; /* Un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.4);
+}
