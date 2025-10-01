@@ -32,12 +32,12 @@ function navigateToSection(sectionId) {
             title += " - Nociones Basicas";
             break;
         case 'desafios-eticos':
-            contentPath = 'desafios_eticos.html';
-            title += " - Desafíos Éticos";
+            contentPath = 'variablespython.html';
+            title += " - Variables";
             break;
         case 'campo-trabajo':
-            contentPath = 'campo_trabajo.html';
-            title += " - Campo de Trabajo";
+            contentPath = 'Conditionals.html';
+            title += " - Condicionales";
             break;
         case 'habilidades-informatico':
             contentPath = 'habilidades_informatico.html';

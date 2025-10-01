@@ -4,6 +4,10 @@ header {
     padding: 20px 0;
     box-shadow: 0 4px 10px rgba(0, 191, 255, 0.2);
 }
+.ReseniaFoto{
+display: flex;
+}
+
 
 /* Contenedor Flex */
 .header-content {
@@ -283,6 +287,43 @@ footer {
 .content-section .image-container {
     text-align: center;
     margin: 40px 0;
+}
+
+.NocionesBparrafo{
+    width: 65%;
+}
+
+.introVariables{
+    width: 40%;
+    text-align: justify;
+
+}
+
+.ContenidoVariables{
+    display: flex;
+    
+}
+
+.image-container-Variables{
+    width: 90%;
+    height: auto;
+}
+
+.image-container-Variables img{
+    width: 90%;
+    margin-left: 10%;
+
+}
+
+.image-container-Variables p{
+    margin-left: 10%;
+}
+
+.image-container-Nociones{
+   width: 900px;   /* Ajusta el ancho */
+  height: auto; 
+   margin-left: 10%;
+
 }
 
 .content-section .image-container img {
