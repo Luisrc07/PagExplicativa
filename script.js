@@ -31,21 +31,21 @@ function navigateToSection(sectionId) {
             contentPath = 'nociones_basic_section.html';
             title += " - Nociones Basicas";
             break;
-        case 'desafios-eticos':
+        case 'variable_section':
             contentPath = 'variablespython.html';
             title += " - Variables";
             break;
-        case 'campo-trabajo':
-            contentPath = 'Conditionals.html';
+        case 'Condicional_section':
+            contentPath = 'Condicionalespython.html';
             title += " - Condicionales";
             break;
-        case 'habilidades-informatico':
-            contentPath = 'habilidades_informatico.html';
-            title += " - Habilidades del Informático";
+        case 'bucles-section':
+            contentPath = 'Funtiones.html';
+            title += " - Funciones";
             break;
-        case 'codigo-deontologico':
-            contentPath = 'codigo_deontologico.html';
-            title += " - Código Deontológico";
+        case 'bucles-section':
+            contentPath = 'Buclespython.html';
+            title += " - Bucles";
             break;
         case 'home': // Handle explicit home navigation
         case '':     // Handle empty hash (e.g., initial load or root URL)

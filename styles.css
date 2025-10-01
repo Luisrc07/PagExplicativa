@@ -299,10 +299,63 @@ footer {
 
 }
 
-.ContenidoVariables{
-    display: flex;
+.ContenidoVariables_tipodato{
+    
     
 }
+
+.ImagenesExpl p{
+    text-align: center;
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-top: 8px;
+}
+
+.listasImagen{
+    display: flex;
+}
+.contenido_tipodatos h4{
+    margin-top: 0;
+    color: #00bfff;
+    font-size: 1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.contenido_tipodatos{
+    margin-bottom: 7%;
+    display: flex;
+}
+
+.tablasOperadores{
+    width: 40%;
+    font-size: 18px;
+    border-collapse: collapse;
+}
+
+.contenidoOperaciones{
+    display: flex;
+}
+
+.tablasOperadores th, td{
+    padding: 10px;
+    text-align: center;
+}
+.image-container-dato{
+    margin-left: 5%;
+    margin-top: 10%;
+    width: 60%;;
+}
+
+.Variables_{
+    margin-top: 2%;
+    display: flex;
+}
+
+.Variables_ img{
+    margin-top: 3%;
+}
+
 
 .image-container-Variables{
     width: 90%;
